@@ -1,8 +1,11 @@
 body{
-  background: #ff0084;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #33001b, #ff0084);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #33001b, #ff0084); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  color: azure;
+  background: #C9FFBF;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #FFAFBD, #C9FFBF);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #FFAFBD, #C9FFBF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  text-align: center;
+  height: 100vh;
+  width: 100%;
+  margin:0;
 }
 
 *{
@@ -10,7 +13,7 @@ body{
   margin:0;
 }
 
-.noteHeader, .noteBody, .noteFooter{
+.noteHeader{
   background-color: rgba(0,0,0, .6);
   padding: 20px;
   margin: 0 auto;
@@ -18,15 +21,98 @@ body{
   text-align: center;
 }
 
-.noteFooter{
-  bottom: 0;
+.noteHeader{
+  top: 0;
   position: fixed;
   left: 0;
   width: 100%;
 }
 
+.logo{
+  float: left;
+}
+
+.btnSignUp{
+  float: right;
+  margin-right: 100px;
+  border-color: rgb(248, 24, 73);
+  border-radius: 5px;
+  padding: 8px;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: transparent !important;
+  color:#ffffff;
+}
+
+.btnSignUp:hover{
+   color: #FFAFBD;
+   border-color: #a336ce;
+}
+
 .noteBody{
-  margin-top: 20px;
+  float: center;
+  margin: 30px 20px 30px 250px;
+  padding: 20px 10px 20px 150px;
+  
+}
+
+aside{
+  background: #FFAFBD;
+	float: left;
+  width: 310px;
+  padding-top:2%;
+  text-align: center;
+  height: 100vh;
+  
+}
+
+.notesContainer{
+  text-align: center;
+  margin-top: 100px;
+  font-family: 'Indie Flower', cursive;
+  font-size: 46px;
+  color: #ffffff;
+  padding-right: 10%;
+}
+
+.init{
+  color: #000000;
+  text-align: center;
+}
+
+.icon{
+  color: #000000;
+}
+
+.btn{
+  text-align: center;
+  margin-top: 100px;
+  border-color: rgb(248, 24, 73);
+  border-radius: 5px;
+  padding: 8px;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: transparent !important;
+}
+
+.btn:hover{
+  border-color: rgb(76, 3, 110);
+  color: rgb(101, 3, 146);
+}
+
+
+i{
+  margin-left: 25px;
+  color: #ffffff;
+  
+}
+
+img{
+  border-radius: 100%;
+  float: center;
+  width: 50%;
 }
 /* @keyframes App-logo-spin {
   from { transform: rotate(0deg); }

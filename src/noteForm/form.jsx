@@ -8,15 +8,24 @@ class Form extends Component {
  }
 
 addNote(){
-    this.props.addNote(this.textInput.value);
+    let textVacio = this.textInput.value.trim();
+   if(this.textInput.value != '' && textVacio != "" ){
+    this.props.addNote(this.textInput.value,this.textTitulo.value);
+    this.textTitulo.value= '';
     this.textInput.value= '';
-    this.textInput.focus();
+    this.textTitulo.focus();
+}else{
+    alert("debe llenar los campos vacios")
+}
+
 }
 
  render(){
      return(
          <div className="NoteForm">
-            <input type="text"  ref={input=>{this.textInput = input;}}/>
+            Mi Nota
+            <input placeholder="titulo" type="text"  ref={input=>{this.textInput = input;}}/>
+            <input placeholder="Escribe tu nota" type="text"  ref={titulo=>{this.textTitulo = titulo;}}/><br/>
             <button onClick={this.addNote}>Add Note</button>
          </div>
      )

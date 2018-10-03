@@ -1,5 +1,11 @@
 .NoteForm input[type="text"]{
-    padding: 20px;
+    padding: 8px;
+    border:none;
+    width: 250px;
+}
+
+.NoteForm .text{
+    height: 50px; 
 }
 
 .NoteForm button {
@@ -14,4 +20,10 @@
     background: #ff3b3b;
     color: azure;
     cursor: pointer;
+}
+
+.NoteForm{
+    box-shadow: 0 0 10px #444444;
+    margin-bottom: 50px;
+    padding:10px 10px 10px 10px;
 }

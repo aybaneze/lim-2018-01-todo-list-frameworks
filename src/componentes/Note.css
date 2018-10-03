@@ -3,4 +3,17 @@
     padding: 20px;
     color: #000000;
     margin-top: 10px;
+    border: #000000;
+}
+li{
+    list-style: none;
+}
+
+span{
+    margin:5px 15px 5px 15px;
+
+}
+
+.titulo{
+    border-color: #000000;
 }
