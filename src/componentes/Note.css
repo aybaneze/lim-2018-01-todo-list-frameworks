@@ -1,19 +1,21 @@
 .Note{
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(255, 242, 242);
     padding: 20px;
     color: #000000;
     margin-top: 10px;
-    border: #000000;
+    font-size:19px;
 }
 li{
     list-style: none;
+    border-top: #000000 2px solid;
+    margin-top: 10px;
 }
 
 span{
-    margin:5px 15px 5px 15px;
-
+    margin:5px 15px 5px 0;
+    float: right;
+    cursor: pointer;
 }
-
-.titulo{
-    border-color: #000000;
+p{
+    font-weight: 1000;
 }

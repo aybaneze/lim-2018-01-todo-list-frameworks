@@ -19,19 +19,19 @@ class Note extends Component {
         return;
       }
            
-    handleList(id){
+    // handleList(id){  
 
-    }
+    //     Note.style.background="#000"
+    // }
 
 render(){
     return(
     <div className="Note">  
-        <span onClick={ ()=> this.handleDelete(this.noteId)} class="fas fa-trash-alt"></span>  
-        <span onClick={() => this.handleList(this.noteId)} class="fas fa-edit"></span>
-        <div className="titulo">
-        <p> {this.titulo}</p>
-        </div>
-        <li> {this.content}</li>
+        <span onClick={ ()=> this.handleDelete(this.noteId)} className="fas fa-trash-alt"></span>  
+        <span onClick={() => this.handle(this.noteId)} className="fas fa-edit"></span>
+        <span onClick={() => this.handleList(this.noteId)} className="fas fa-check"></span>
+        <p> {this.content}</p>      
+        <li> {this.titulo}</li>
         
     </div>
     )}}

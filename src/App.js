@@ -10,9 +10,10 @@ class App extends Component {
   constructor(){
     super(); //hereda todas las clases de component
     this.state = {
-      user : null,
+      user: null,   
       notes: [ ]
-      };    
+      };
+     
       this.app =firebase.initializeApp(db_config);
       this.db = this.app.database().ref().child('notes');
       this.addNote = this.addNote.bind(this);
@@ -27,6 +28,7 @@ class App extends Component {
       firebase.auth().onAuthStateChanged(user=>{       
         this.setState({user})
       })
+
       const { notes } = this.state;
       this.db.on('child_added', snap => {    
         notes.push({
@@ -49,8 +51,7 @@ class App extends Component {
     }
 
     Google(){
-      const provider = new firebase.auth.GoogleAuthProvider();
-   
+      const provider = new firebase.auth.GoogleAuthProvider();  
       firebase.auth().signInWithPopup(provider)
       .then(response=>console.log(`${response.user.email} ha iniciado sesión`))
       .catch((err=>console.log("${err.code} erro")))
@@ -68,10 +69,10 @@ class App extends Component {
         <div>
         <div className="noteHeader">
         <div className="logo"> 
-         DataNotes<i class="fas fa-file-signature fa-1x"> </i>
+         DataNotes<i className="fas fa-file-signature fa-1x"> </i>
         </div>
         <div className="signUp">
-         <button onClick={this.logOut} className="btnSignUp">Cierra Sesión</button>
+         <button onClick={this.logOut} className="btnSignUp">Cerrar Sesión</button>
         </div>
         </div>
         <aside>
@@ -90,7 +91,7 @@ class App extends Component {
                 noteId = { note.noteId}
                 key={note.noteId}
                 removeNote = {this.removeNote}
-                editNote={this.removeNote}
+                ListNote={this.ListNote}
                 />
               )
             })
@@ -102,7 +103,7 @@ class App extends Component {
       return(
       <div>
         <div className="init">
-          DataNotes<i class="fas fa-file-signature fa-1x icon"> </i>
+          DataNotes<i className="fas fa-file-signature fa-1x icon"> </i>
         </div>
       <button className="btn" onClick={this.Google}>Inicia Sesión con Google</button>
       </div>
@@ -118,7 +119,7 @@ class App extends Component {
       this.db.child(noteId).remove();
     }
 
-    editNote(noteId){
+    ListNote(noteId){
       this.db.push().set({status: noteId});
     }
   

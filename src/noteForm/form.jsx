@@ -26,7 +26,7 @@ addNote(){
             Mi Nota
             <input placeholder="titulo" type="text"  ref={input=>{this.textInput = input;}}/>
             <input placeholder="Escribe tu nota" type="text"  ref={titulo=>{this.textTitulo = titulo;}}/><br/>
-            <button onClick={this.addNote}>Add Note</button>
+            <button onClick={this.addNote}>Agregar</button>
          </div>
      )
  }
