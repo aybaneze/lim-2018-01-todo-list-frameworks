@@ -17,8 +17,9 @@ addNote(){
 }else{
     alert("debe llenar los campos vacios")
 }
-
 }
+
+
 
  render(){
      return(

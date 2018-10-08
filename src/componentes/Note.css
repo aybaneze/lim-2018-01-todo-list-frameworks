@@ -16,6 +16,18 @@ span{
     float: right;
     cursor: pointer;
 }
+
+#checked {
+    text-decoration: line-through;
+    background: red;
+  }
+
 p{
     font-weight: 1000;
+}
+
+h1{
+    font-size:16px;
+    background: #000000;
+    color: white;
 }
